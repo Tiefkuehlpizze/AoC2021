@@ -33,6 +33,8 @@ def part2():
     polymer, mapping = get_input()
 
     pattern_count = Counter()
+    # Count every existing pattern in the initial polymer
+    # do not go for the full length here: it would just be a single letter
     for i in range(len(polymer) - 1):
         pattern_count[polymer[i:i + 2]] += 1
     for _ in range(40):
